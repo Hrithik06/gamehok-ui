@@ -50,23 +50,23 @@ export const featuredTournaments = [
     status: "Registration Open",
     tags: ["BGMI", "Solo", "Free"],
   },
-  {
-    id: "3",
-    title: "Valorant Masters",
-    organizer: "TMR Esports",
-    organizerLogo: "/images/gs.jpg",
-    banner: "/images/dominion.jpg",
-    prizePool: 2000,
-    totalSlots: 500,
-    filledSlots: 320,
-    progress: 320 / 500,
-    game: "Valorant",
-    mode: "Squad",
-    entryFee: 20,
-    isFree: false,
-    status: "Registration Open",
-    tags: ["Valorant", "Squad", "Entry-20"],
-  },
+  // {
+  //   id: "3",
+  //   title: "Valorant Masters",
+  //   organizer: "TMR Esports",
+  //   organizerLogo: "/images/gs.jpg",
+  //   banner: "/images/dominion.jpg",
+  //   prizePool: 2000,
+  //   totalSlots: 500,
+  //   filledSlots: 320,
+  //   progress: 320 / 500,
+  //   game: "Valorant",
+  //   mode: "Squad",
+  //   entryFee: 20,
+  //   isFree: false,
+  //   status: "Registration Open",
+  //   tags: ["Valorant", "Squad", "Entry-20"],
+  // },
 ];
 
 export const games = [
@@ -89,6 +89,16 @@ export const games = [
     id: "bgmi",
     name: "BGMI",
     image: "/images/bgmi.jpg",
+  },
+  {
+    id: "cs2",
+    name: "CS 2",
+    image: "/images/cs2.png",
+  },
+  {
+    id: "PUBG PC",
+    name: "VALORANT",
+    image: "/images/valorant.jpg",
   },
 ];
 

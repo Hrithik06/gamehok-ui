@@ -4,6 +4,7 @@ import BottomNav from "@/components/layout/BottomNav";
 import FeaturedTournaments from "@/components/home/FeaturedTournaments";
 import GameHighlights from "@/components/home/GameHighlights";
 import HeroBanner from "@/components/home/HeroBanner";
+import PlayByGames from "@/components/home/PlayByGames";
 
 export default function Home() {
   return (
@@ -46,13 +47,13 @@ export default function Home() {
       <div className="flex flex-col lg:col-span-2">
         {/* TopBar spans both */}
         <TopBar />
-
         {/* Content row */}
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_300px]">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_400px]">
           {/* Main Content */}
-          <main className="p-4 flex flex-col gap-6">
+          <main className="p-10 flex flex-col gap-6">
             <HeroBanner />
             <FeaturedTournaments />
+            <PlayByGames />
           </main>
 
           {/* Right Panel */}
@@ -61,6 +62,7 @@ export default function Home() {
           </aside>
         </div>
       </div>
+      <BottomNav />
     </div>
   );
 }

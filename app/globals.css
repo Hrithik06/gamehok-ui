@@ -30,6 +30,21 @@ body {
     --color-primary: #01a74b;
     --color-dark-green: #002e14;
     --color-processing: #ffcc4d;
+    --color-link: #0cf285;
     --font-sans: var(--font-geist-sans);
     --font-mono: var(--font-geist-mono);
+}
+/* Hide scrollbar (Chrome, Safari, Edge) */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar (Firefox) */
+.no-scrollbar {
+    scrollbar-width: none;
+}
+
+/* Hide scrollbar (IE/old Edge) */
+.no-scrollbar {
+    -ms-overflow-style: none;
 }
