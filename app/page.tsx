@@ -50,7 +50,7 @@ export default function Home() {
         {/* Content row */}
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_400px]">
           {/* Main Content */}
-          <main className="p-10 flex flex-col gap-6">
+          <main className="p-4 lg:p-10 flex flex-col gap-6">
             <HeroBanner />
             <FeaturedTournaments />
             <PlayByGames />

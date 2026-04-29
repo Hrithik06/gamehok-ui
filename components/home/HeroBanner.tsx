@@ -22,9 +22,9 @@ export default function HeroBanner() {
         </p>
 
         {/*<div className="flex lg:gap-8 gap-4 mt-2">*/}
-        <div className="flex justify-between lg:justify-start lg:gap- mt-2">
+        <div className="flex justify-center gap-4 lg:justify-start lg:gap-6 mt-2">
           {/* Posts */}
-          <div className="flex flex-col items-center gap-1">
+          <div className="flex flex-col justify-center items-center gap-1">
             <div className="p-1.5 border border-[#2E9EEE] rounded-full">
               <Image
                 src="/images/social.svg"
@@ -38,7 +38,7 @@ export default function HeroBanner() {
           </div>
 
           {/* Followers */}
-          <div className="flex flex-col items-center gap-1">
+          <div className="flex flex-col justify-center items-center gap-1">
             <div className="p-1.5 border border-[#FFC39B] rounded-full">
               <Image
                 src="/images/followers.svg"
@@ -54,7 +54,7 @@ export default function HeroBanner() {
           </div>
 
           {/* Likes */}
-          <div className="flex flex-col items-center gap-1">
+          <div className="flex flex-col justify-center items-center gap-1">
             <div className="p-1.5 border border-[#B287FF] rounded-full">
               <Image
                 src="/images/likes.svg"
@@ -71,7 +71,7 @@ export default function HeroBanner() {
 
       {/* IMAGE */}
 
-      <div className="w-25 h-22.5 lg:w-44 lg:h-44 flex items-center justify-center lg:mr-10">
+      <div className="w-30 h-22.5 lg:w-44 lg:h-44 flex items-center justify-center lg:mr-10">
         <Image
           src="/images/star.png"
           alt="star"
