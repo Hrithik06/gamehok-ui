@@ -32,7 +32,7 @@ export default function TopBar() {
             <p className="text-sm font-medium">{user.coins}</p>
           </div>
 
-          <div className="w-px h-4 bg-white/40"></div>
+          <div className="hidden lg:block w-px h-5 bg-white/40"></div>
 
           <div className="flex items-center gap-1 px-3 py-1">
             <Image src="/images/coin.png" alt="coin" width={20} height={20} />
