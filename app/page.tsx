@@ -3,6 +3,7 @@ import Sidebar from "@/components/layout/Sidebar";
 import BottomNav from "@/components/layout/BottomNav";
 import FeaturedTournaments from "@/components/home/FeaturedTournaments";
 import GameHighlights from "@/components/home/GameHighlights";
+import HeroBanner from "@/components/home/HeroBanner";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
           <TopBar />
 
           <div className="p-4 flex flex-col gap-6">
+            <HeroBanner />
             <FeaturedTournaments />
           </div>
         </main>

@@ -28,8 +28,8 @@ body {
     /* 🔥 ADD THESE */
 
     --color-primary: #01a74b;
-    --color-bg-dark-green: #002e14;
-
+    --color-dark-green: #002e14;
+    --color-processing: #ffcc4d;
     --font-sans: var(--font-geist-sans);
     --font-mono: var(--font-geist-mono);
 }
