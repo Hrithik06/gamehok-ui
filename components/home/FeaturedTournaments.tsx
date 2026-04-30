@@ -8,7 +8,9 @@ export default function FeaturedTournaments() {
         <h2 className="text-lg lg:text-3xl font-semibold">
           Featured Tournaments
         </h2>
-        <p className="text-link text-xs lg:text-base">VIEW ALL</p>
+        <a href="#" className="text-link text-xs lg:text-base">
+          VIEW ALL
+        </a>
       </div>
       <div
         className="

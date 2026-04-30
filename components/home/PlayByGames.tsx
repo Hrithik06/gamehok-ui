@@ -28,7 +28,9 @@ export default function PlayByGames() {
         <h2 className="text-lg lg:text-3xl font-semibold">
           Play Tournaments by Games
         </h2>
-        <p className="text-link text-xs lg:text-base">VIEW ALL</p>
+        <a href="#" className="text-link text-xs lg:text-base">
+          VIEW ALL
+        </a>
       </div>
       {/* Mobile: 3 col x 2 row grid */}
       <div className="grid grid-cols-3 gap-2 sm:hidden">

@@ -126,19 +126,49 @@ export const gameHighlights = [
     id: "1",
     title: "Call of Duty",
     thumbnail: "/images/cod.jpg",
-    hasVideo: true,
+    hasVideo: false,
   },
   {
     id: "2",
     title: "BGMI Tournaments",
     thumbnail: "/images/bgmi_tourn.jpg",
-    hasVideo: false,
+    hasVideo: true,
   },
   {
     id: "3",
-    title: "Valorant Highlights",
+    title: "Call of Duty",
+    thumbnail: "/images/cod.jpg",
+    hasVideo: true,
+  },
+  {
+    id: "4",
+    title: "BGMI Tournaments",
     thumbnail: "/images/bgmi_tourn.jpg",
     hasVideo: false,
+  },
+  {
+    id: "5",
+    title: "Call of Duty",
+    thumbnail: "/images/cod.jpg",
+    hasVideo: false,
+  },
+  {
+    id: "6",
+    title: "BGMI Tournaments",
+    thumbnail: "/images/bgmi_tourn.jpg",
+    hasVideo: true,
+  },
+  {
+    id: "7",
+    title: "Call of Duty",
+    thumbnail: "/images/cod.jpg",
+    hasVideo: false,
+  },
+  {
+    id: "8",
+    title: "BGMI Tournaments",
+    thumbnail: "/images/bgmi_tourn.jpg",
+    hasVideo: true,
   },
 ];
 

@@ -6,7 +6,7 @@ export default function HeroBanner() {
       className="
         bg-radial from-[#00A155] to-[#003B1F]
         rounded-xl p-3
-        flex items-center justify-between
+        flex items-center justify-between gap-2
         flex-row-reverse lg:flex-row
       "
     >
