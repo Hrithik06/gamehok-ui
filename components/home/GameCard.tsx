@@ -1,6 +1,9 @@
+import { Game } from "@/data/mock";
 import Image from "next/image";
-
-export default function GameCard({ game }: any) {
+type GameProps = {
+  game: Game;
+};
+export default function GameCard({ game }: GameProps) {
   return (
     <div className="flex flex-col items-center gap-2">
       <div className="w-full h-[80px] lg:h-[200px] rounded-lg overflow-hidden">

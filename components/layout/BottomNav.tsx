@@ -2,15 +2,16 @@
 
 import { useState } from "react";
 import { HouseHeart, MessageCircleMore, Trophy, Users } from "lucide-react";
+import Link from "next/link";
 
 export default function BottomNav() {
   const [active, setActive] = useState("home");
 
   const navItems = [
-    { id: "home", label: "Home", icon: HouseHeart },
-    { id: "tournament", label: "My Tournament", icon: Trophy },
-    { id: "social", label: "Social", icon: Users },
-    { id: "chat", label: "Chat", icon: MessageCircleMore },
+    { id: "home", label: "Home", link: "/", icon: HouseHeart },
+    { id: "tournament", label: "My Tournament", link: "", icon: Trophy },
+    { id: "social", label: "Social", link: "", icon: Users },
+    { id: "chat", label: "Chat", link: "", icon: MessageCircleMore },
   ];
 
   return (
@@ -20,34 +21,36 @@ export default function BottomNav() {
         const isActive = active === item.id;
 
         return (
-          <button
-            key={item.id}
-            onClick={() => setActive(item.id)}
-            className="relative flex flex-col items-center gap-1 px-3 py-2"
-          >
-            {/* 🔥 TOP GREEN PILL */}
-            {isActive && (
-              <div className="absolute -top-1 w-8 h-1 bg-green-400 rounded-full shadow-[0_0_8px_rgba(34,197,94,0.6)]" />
-            )}
+          <Link href={item.link} key={item.id}>
+            <button
+              key={item.id}
+              onClick={() => setActive(item.id)}
+              className="relative flex flex-col items-center gap-1 px-3 py-2"
+            >
+              {/* 🔥 TOP GREEN PILL */}
+              {isActive && (
+                <div className="absolute -top-1 w-8 h-1 bg-green-400 rounded-full shadow-[0_0_8px_rgba(34,197,94,0.6)]" />
+              )}
 
-            {/* Icon */}
-            <Icon
-              size={20}
-              className={`
+              {/* Icon */}
+              <Icon
+                size={20}
+                className={`
                 ${isActive ? "text-green-400" : "text-gray-400"}
               `}
-            />
+              />
 
-            {/* Label */}
-            <span
-              className={`
+              {/* Label */}
+              <span
+                className={`
                 text-[10px]
                 ${isActive ? "text-green-400" : "text-gray-400"}
               `}
-            >
-              {item.label}
-            </span>
-          </button>
+              >
+                {item.label}
+              </span>
+            </button>
+          </Link>
         );
       })}
     </nav>

@@ -1,1 +1,2 @@
-[ ] Bird for mobile
+[x] Bird for mobile
+[ ] Placeholders for Teams and Rules tabs

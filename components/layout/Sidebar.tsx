@@ -9,15 +9,15 @@ import {
   Users,
 } from "lucide-react";
 import Image from "next/image";
-
+import Link from "next/link";
 export default function Sidebar() {
   const [active, setActive] = useState("home");
 
   const navItems = [
-    { id: "home", label: "Home", icon: HouseHeart },
-    { id: "tournament", label: "My Tournament", icon: Trophy },
-    { id: "social", label: "Social", icon: Users },
-    { id: "chat", label: "Chat", icon: MessageCircleMore },
+    { id: "home", label: "Home", link: "/", icon: HouseHeart },
+    { id: "tournament", label: "My Tournament", link: "", icon: Trophy },
+    { id: "social", label: "Social", link: "", icon: Users },
+    { id: "chat", label: "Chat", link: "", icon: MessageCircleMore },
   ];
 
   return (
@@ -36,10 +36,10 @@ export default function Sidebar() {
             const isActive = active === item.id;
 
             return (
-              <button
-                key={item.id}
-                onClick={() => setActive(item.id)}
-                className={`
+              <Link href={item.link} key={item.id}>
+                <button
+                  onClick={() => setActive(item.id)}
+                  className={`
                   flex items-center gap-3 px-3 py-2 rounded-lg transition
                   ${
                     isActive
@@ -47,13 +47,14 @@ export default function Sidebar() {
                       : "text-gray-400 hover:bg-white/5 hover:text-white"
                   }
                 `}
-              >
-                <Icon
-                  size={18}
-                  className={isActive ? "text-green-400" : "text-gray-400"}
-                />
-                <span className="text-sm">{item.label}</span>
-              </button>
+                >
+                  <Icon
+                    size={18}
+                    className={isActive ? "text-green-400" : "text-gray-400"}
+                  />
+                  <span className="text-sm">{item.label}</span>
+                </button>
+              </Link>
             );
           })}
         </nav>

@@ -16,17 +16,47 @@ export const metadata: Metadata = {
   title: "Gamehok",
   description: "Gamehok",
 };
+// export default function RootLayout({
+//   children,
+// }: Readonly<{
+//   children: React.ReactNode;
+// }>) {
+//   return (
+//     <html
+//       lang="en"
+//       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+//     >
+//       <body className="min-h-full flex flex-col">{children}</body>
+//     </html>
+//   );
+// }
+
+import Sidebar from "@/components/layout/Sidebar";
+import TopBar from "@/components/layout/TopBar";
+import BottomNav from "@/components/layout/BottomNav";
+
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">{children}</body>
+    <html lang="en">
+      <body className="h-screen overflow-hidden bg-[#0B0F0D] text-white">
+        <div className="h-screen overflow-hidden grid grid-cols-1 lg:grid-cols-[220px_1fr]">
+          {/* Sidebar */}
+          <aside className="hidden lg:flex flex-col border-r border-white/10 h-screen overflow-y-auto">
+            <Sidebar />
+          </aside>
+
+          {/* Right side: TopBar + page content */}
+          <div className="flex flex-col h-screen overflow-hidden">
+            <TopBar />
+            <main className="flex-1 overflow-hidden">{children}</main>
+          </div>
+        </div>
+        <BottomNav />
+      </body>
     </html>
   );
 }

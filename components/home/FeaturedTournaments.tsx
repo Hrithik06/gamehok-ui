@@ -1,5 +1,6 @@
 import { featuredTournaments } from "@/data/mock";
 import TournamentCard from "./TournamentCard";
+import Link from "next/link";
 
 export default function FeaturedTournaments() {
   return (
@@ -19,15 +20,13 @@ export default function FeaturedTournaments() {
       "
       >
         {featuredTournaments.map((t) => (
-          <div
+          <Link
             key={t.id}
-            className="
-            min-w-65 shrink-0
-            lg:min-w-0
-          "
+            href={`/tournament/${t.id}`}
+            className="min-w-65 shrink-0 lg:min-w-0"
           >
-            <TournamentCard data={t} />
-          </div>
+            <TournamentCard tournament={t} />
+          </Link>
         ))}
       </div>
     </section>
