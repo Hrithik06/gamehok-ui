@@ -18,8 +18,6 @@ export const metadata: Metadata = {
 };
 
 import Sidebar from "@/components/layout/Sidebar";
-import TopBar from "@/components/layout/TopBar";
-import BottomNav from "@/components/layout/BottomNav";
 
 export default function RootLayout({
   children,
@@ -33,18 +31,13 @@ export default function RootLayout({
     >
       <body className="h-screen overflow-hidden bg-[#0B0F0D] text-white">
         <div className="h-screen overflow-hidden grid grid-cols-1 lg:grid-cols-[220px_1fr]">
-          {/* Sidebar */}
-          <aside className="hidden lg:flex flex-col border-r border-white/10 h-screen overflow-y-auto">
+          <aside className="hidden lg:flex flex-col border-r border-white/10 h-screen">
             <Sidebar />
           </aside>
-
-          {/* Right side: TopBar + page content */}
           <div className="flex flex-col h-screen overflow-hidden">
-            <TopBar />
-            <main className="flex-1 overflow-hidden">{children}</main>
+            {children}
           </div>
         </div>
-        <BottomNav />
       </body>
     </html>
   );

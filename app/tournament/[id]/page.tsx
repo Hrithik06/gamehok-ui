@@ -1,3 +1,4 @@
+import TopBar from "@/components/layout/TopBar";
 import LobbiesTab from "@/components/tournament/LobbiesTab";
 import OverviewTab from "@/components/tournament/OverviewTab";
 import Tabs from "@/components/tournament/Tabs";
@@ -42,9 +43,28 @@ export default async function TournamentPage({
     },
   ];
   return (
-    <div className="h-full overflow-y-auto p-4 pb-20 lg:p-16 text-white">
-      <TournamentHeader tournamentDetails={tournament} />
-      <Tabs tabs={tabs} />
-    </div>
+    <>
+      <div className="hidden lg:block">
+        <TopBar /> {/* desktop only */}
+      </div>
+      <div className="overflow-y-auto h-full p-4 pb-20 lg:p-8">
+        <div className="h-full overflow-y-auto p-4 lg:p-16 text-white">
+          <TournamentHeader tournamentDetails={tournament} />
+          <Tabs tabs={tabs} />
+        </div>
+        {/*<div className="fixed w-full bottom-0 ">
+          <div className="flex justify-center py-6 lg:justify-end">
+            <button className="bg-green-700 px-4 py-2.5 rounded-lg">
+              JOIN TOURNAMENT
+            </button>
+          </div>
+        </div>*/}
+        <div className="fixed bottom-0 left-0 lg:left-[220px] right-0 flex justify-center lg:justify-end px-6 py-4 bg-[#0B0F0D] shadow-top">
+          <button className="w-full lg:w-auto bg-green-700 px-6 py-2.5 rounded-lg cursor-pointer">
+            JOIN TOURNAMENT
+          </button>
+        </div>
+      </div>
+    </>
   );
 }
