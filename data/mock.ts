@@ -228,14 +228,36 @@ export const tournamentDetails = [
       "Join the match and wait for the game to start.",
       "When eliminated return to the match room page to be ready to join the next map in the round.",
     ],
-    lobbies: {
-      rounds: ["Round 3", "Round 2", "Round 1"],
-      activeRound: "Round 3",
-      list: Array.from({ length: 12 }, (_, i) => ({
-        id: `${i + 1}`,
-        name: `Lobby ${i + 1}`,
-        status: "Yet to be scheduled",
-      })),
+    lobbySection: {
+      rounds: [
+        {
+          id: "round-3",
+          name: "Round 3",
+          lobbies: Array.from({ length: 6 }, (_, i) => ({
+            id: `r3-l${i + 1}`,
+            name: `Lobby ${i + 1}`,
+            status: "Yet to be scheduled",
+          })),
+        },
+        {
+          id: "round-2",
+          name: "Round 2",
+          lobbies: Array.from({ length: 4 }, (_, i) => ({
+            id: `r2-l${i + 1}`,
+            name: `Lobby ${i + 1}`,
+            status: "Yet to be scheduled",
+          })),
+        },
+        {
+          id: "round-1",
+          name: "Round 1",
+          lobbies: Array.from({ length: 3 }, (_, i) => ({
+            id: `r1-l${i + 1}`,
+            name: `Lobby ${i + 1}`,
+            status: "Yet to be scheduled",
+          })),
+        },
+      ],
     },
   },
   {
@@ -295,14 +317,36 @@ export const tournamentDetails = [
       "Join the match and wait for the game to start.",
       "When eliminated return to the match room page to be ready to join the next map in the round.",
     ],
-    lobbies: {
-      rounds: ["Round 3", "Round 2", "Round 1"],
-      activeRound: "Round 3",
-      list: Array.from({ length: 12 }, (_, i) => ({
-        id: `${i + 1}`,
-        name: `Lobby ${i + 1}`,
-        status: "Yet to be scheduled",
-      })),
+    lobbySection: {
+      rounds: [
+        {
+          id: "round-3",
+          name: "Round 3",
+          lobbies: Array.from({ length: 6 }, (_, i) => ({
+            id: `r3-l${i + 1}`,
+            name: `Lobby ${i + 1}`,
+            status: "Yet to be scheduled",
+          })),
+        },
+        {
+          id: "round-2",
+          name: "Round 2",
+          lobbies: Array.from({ length: 4 }, (_, i) => ({
+            id: `r2-l${i + 1}`,
+            name: `Lobby ${i + 1}`,
+            status: "Yet to be scheduled",
+          })),
+        },
+        {
+          id: "round-1",
+          name: "Round 1",
+          lobbies: Array.from({ length: 3 }, (_, i) => ({
+            id: `r1-l${i + 1}`,
+            name: `Lobby ${i + 1}`,
+            status: "Yet to be scheduled",
+          })),
+        },
+      ],
     },
   },
 ];

@@ -3,6 +3,7 @@ import OverviewTab from "@/components/tournament/OverviewTab";
 import Tabs from "@/components/tournament/Tabs";
 import TournamentHeader from "@/components/tournament/TournamentHeader";
 import { tournamentDetails } from "@/data/mock";
+import { notFound } from "next/navigation";
 export default async function TournamentPage({
   params,
 }: {
@@ -11,8 +12,9 @@ export default async function TournamentPage({
   const { id } = await params;
 
   const tournament = tournamentDetails.find((t) => t.id === id);
-  console.log(tournament);
-  if (!tournament) return <div>Not found</div>;
+
+  if (!tournament) notFound();
+
   const tabs = [
     {
       label: "Overview",
@@ -28,7 +30,7 @@ export default async function TournamentPage({
     },
     {
       label: "Lobbies",
-      content: <LobbiesTab tournamentDetails={tournament} />,
+      content: <LobbiesTab lobbySection={tournament.lobbySection} />,
     },
     {
       label: "Rules",

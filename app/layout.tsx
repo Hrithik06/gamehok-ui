@@ -16,20 +16,6 @@ export const metadata: Metadata = {
   title: "Gamehok",
   description: "Gamehok",
 };
-// export default function RootLayout({
-//   children,
-// }: Readonly<{
-//   children: React.ReactNode;
-// }>) {
-//   return (
-//     <html
-//       lang="en"
-//       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-//     >
-//       <body className="min-h-full flex flex-col">{children}</body>
-//     </html>
-//   );
-// }
 
 import Sidebar from "@/components/layout/Sidebar";
 import TopBar from "@/components/layout/TopBar";
@@ -41,7 +27,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html
+      lang="en"
+      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+    >
       <body className="h-screen overflow-hidden bg-[#0B0F0D] text-white">
         <div className="h-screen overflow-hidden grid grid-cols-1 lg:grid-cols-[220px_1fr]">
           {/* Sidebar */}
