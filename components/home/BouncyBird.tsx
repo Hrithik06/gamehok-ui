@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Irish_Grover } from "next/font/google";
+import SmartImage from "../common/SmartImage";
 
 const irish = Irish_Grover({
   weight: "400",
@@ -10,7 +11,7 @@ export default function BouncyBird() {
     <div className="sm:hidden">
       <div className="relative rounded-xl overflow-hidden">
         {/* Background */}
-        <Image
+        <SmartImage
           src="/images/bouncy-bird-bg.png"
           alt="Bouncy Bird Background"
           width={400}

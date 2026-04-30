@@ -2,6 +2,7 @@ import { Tournament } from "@/data/mock";
 import { Users } from "lucide-react";
 import Image from "next/image";
 import OrganiserBadge from "../common/OrganiserBadge";
+import SmartImage from "../common/SmartImage";
 type TournamentProps = {
   tournament: Tournament;
 };
@@ -10,7 +11,7 @@ export default function TournamentCard({ tournament }: TournamentProps) {
     <div className="bg-[#0E1A16] rounded-xl overflow-hidden border border-white/10">
       {/* IMAGE + OVERLAYS */}
       <div className="relative">
-        <Image
+        <SmartImage
           src={tournament.banner}
           alt={tournament.title}
           width={400}

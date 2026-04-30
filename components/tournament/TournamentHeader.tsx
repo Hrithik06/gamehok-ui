@@ -3,6 +3,7 @@ import OrganiserBadge from "../common/OrganiserBadge";
 import { Users } from "lucide-react";
 import BackButton from "../common/BackButton";
 import { TournamentDetails } from "@/data/mock";
+import SmartImage from "../common/SmartImage";
 type HeaderProps = {
   tournamentDetails: TournamentDetails;
 };
@@ -16,7 +17,7 @@ export default function TournamentHeader({ tournamentDetails }: HeaderProps) {
       <BackButton />
       {/* 🎯 Banner */}
       <div className="relative w-full h-40 lg:h-96 rounded-xl overflow-hidden">
-        <Image
+        <SmartImage
           src={tournamentDetails.banner}
           alt={tournamentDetails.title}
           fill

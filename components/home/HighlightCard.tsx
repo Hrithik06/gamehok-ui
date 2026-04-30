@@ -1,6 +1,6 @@
-import Image from "next/image";
 import { Play } from "lucide-react";
 import { GameHighlight } from "@/data/mock";
+import SmartImage from "../common/SmartImage";
 type GameHighlightProps = {
   highlight: GameHighlight;
 };
@@ -9,7 +9,7 @@ export default function HighlightCard({ highlight }: GameHighlightProps) {
     <div className="flex flex-col gap-2 w-full">
       <div className="relative w-full h-36 lg:h-48 rounded-xl overflow-hidden">
         {/* Image */}
-        <Image
+        <SmartImage
           src={highlight.thumbnail}
           alt={highlight.title}
           fill
