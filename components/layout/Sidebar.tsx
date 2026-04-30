@@ -21,7 +21,7 @@ export default function Sidebar() {
   ];
 
   return (
-    <div className="h-full flex flex-col justify-between px-4 py-6 gap-8 bg-[#0B0F0D]">
+    <div className="h-full flex flex-col justify-between px-6 py-6 gap-8 bg-[#0B0F0D]">
       <div className="h-full flex flex-col gap-8">
         {/* Logo */}
         <div className="flex items-center ">
@@ -40,7 +40,7 @@ export default function Sidebar() {
                 <button
                   onClick={() => setActive(item.id)}
                   className={`
-                  flex items-center gap-3 px-3 py-2 rounded-lg transition
+                  flex items-center gap-3 px-3 py-2 rounded-lg transition w-full cursor-pointer
                   ${
                     isActive
                       ? "bg-white/10 text-white font-semibold"
@@ -52,16 +52,16 @@ export default function Sidebar() {
                     size={18}
                     className={isActive ? "text-green-400" : "text-gray-400"}
                   />
-                  <span className="text-sm">{item.label}</span>
+                  <span className="">{item.label}</span>
                 </button>
               </Link>
             );
           })}
         </nav>
       </div>
-      <div className="hidden lg:flex gap-2 text-sm">
-        <Power size={18} className="text-red-400" />
-        <div>Logout</div>
+      <div className="hidden lg:flex gap-2 items-center cursor-pointer group">
+        <Power size={26} className="text-red-400 group-hover:text-red-500" />
+        <div className="text-white/60 group-hover:text-white">Logout</div>
       </div>
     </div>
   );

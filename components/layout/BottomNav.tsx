@@ -25,7 +25,7 @@ export default function BottomNav() {
             <button
               key={item.id}
               onClick={() => setActive(item.id)}
-              className="relative flex flex-col items-center gap-1 px-3 py-2"
+              className="relative flex flex-col items-center gap-1 px-3 py-2 cursor-pointer"
             >
               {/* 🔥 TOP GREEN PILL */}
               {isActive && (

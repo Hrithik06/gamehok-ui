@@ -30,7 +30,7 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="h-screen overflow-hidden bg-[#0B0F0D] text-white">
-        <div className="h-screen overflow-hidden grid grid-cols-1 lg:grid-cols-[220px_1fr]">
+        <div className="h-screen overflow-hidden grid grid-cols-1 lg:grid-cols-[230px_1fr]">
           <aside className="hidden lg:flex flex-col border-r border-white/10 h-screen">
             <Sidebar />
           </aside>

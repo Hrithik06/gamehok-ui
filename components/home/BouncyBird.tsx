@@ -1,37 +1,3 @@
-// import Image from "next/image";
-
-// export default function BouncyBird() {
-//   return (
-//     <div className="sm:hidden">
-//       <div className="relative">
-//         <Image
-//           src={"/images/bouncy-bird-bg.png"}
-//           width={400}
-//           height={200}
-//           alt="Bouncy Bird Background"
-//           className="object-cover rounded"
-//         />
-//         <div>
-//           <Image
-//             src={"/images/bird.png"}
-//             width={90}
-//             height={90}
-//             alt="Bouncy Bird"
-//             className="object-cover absolute"
-//           />
-// <Image
-//   src={"/images/play.png"}
-//   width={90}
-//   height={90}
-//   alt="Play Bouncy Bird"
-//   className="object-cover absolute"
-// />
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
-
 import Image from "next/image";
 import { Irish_Grover } from "next/font/google";
 

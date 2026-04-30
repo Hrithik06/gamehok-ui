@@ -1,6 +1,9 @@
 import { Clock } from "lucide-react";
-
-export default function LobbyCard({ lobby }: any) {
+import { Lobby } from "./LobbiesTab";
+type Props = {
+  lobby: Lobby;
+};
+export default function LobbyCard({ lobby }: Props) {
   return (
     <div className="border border-white/10 rounded-xl p-4 flex flex-col gap-3">
       {/* Top */}
